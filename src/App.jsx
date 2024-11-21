@@ -1,8 +1,8 @@
 import viteLogo from '/vite.svg'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import StoryDetails from './components/StoryDetails'
-
 import Page from './components/Page'
+import StoryDetails from './components/storydata/StoryDetails';
+
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
      <BrowserRouter>
       <Routes>
     <Route path="/" element={<Page />} />
-    <Route path="/story/:id" element={<StoryDetails />} />
+    <Route path='/details/:id' element={<StoryDetails />} />
     </Routes>
     </BrowserRouter>
     </>
