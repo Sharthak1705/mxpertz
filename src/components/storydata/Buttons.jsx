@@ -3,18 +3,15 @@ import { FaSearch } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
 import { IoMailUnread } from "react-icons/io5";
 import Word from "../button/WordExplorer";
-import StoryAdventure from "../button/StoryAdvenure";
+import StoryAdventure from "../storyAdvenure/StoryAdvenure";
 import BrainQuest from "../button/Brain";
 
 const ButtonsSection = () => {
   const [activeComponent, setActiveComponent] = useState("Word");
+  
   return (
-    <div className="bg-[#0B1123]  text-white">
-      {activeComponent === "Word" && <Word />}
-      {activeComponent === "StoryAdventure" && <StoryAdventure />}
-      {activeComponent === "BrainQuest" && <BrainQuest />}
-
-      <div className="flex justify-center space-x-6">
+    <div className="bg-[#0B1123] relative text-white pb-10 flex flex-col">
+      <div className="flex justify-center space-x-6 mt-3">
         <button
           className={`flex items-center space-x-2 px-8 py-3 rounded-md font-bold transition transform ${
             activeComponent === "Word"
@@ -50,6 +47,12 @@ const ButtonsSection = () => {
           <GiBrain className="h-6 w-6" />
           <span>Brain Quest</span>
         </button>
+      </div>
+
+      <div className="flex-grow">
+        {activeComponent === "Word" && <Word />}
+        {activeComponent === "StoryAdventure" && <StoryAdventure />}
+        {activeComponent === "BrainQuest" && <BrainQuest />}
       </div>
     </div>
   );

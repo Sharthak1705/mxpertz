@@ -1,4 +1,5 @@
 import React from "react";
+import { FaAngleDown } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -14,10 +15,10 @@ const Navbar = () => {
         <a href="#" className="hover:text-blue-400">Home</a>
         <a href="#" className="hover:text-blue-400">Leaderboard</a>
         <a href="#" className="hover:text-blue-400">Daily Quiz</a>
-        <a href="#" className="hover:text-blue-400">Games</a>
+        <a href="#" className="flex items-center text-blue-500 hover:text-blue-400">
+      <span className="mr-1">Games</span><FaAngleDown className=" mt-1 h-4 w-4" /></a>
       </nav>
-  
-      <button className="bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-700">
+      <button className="bg-blue-500 px-4 py-2 rounded-full hover:bg-blue-700">
         Sign Out
       </button>
     </header>

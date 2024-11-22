@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Button from './Navbar/Button';
 
-const ScienceFictionStories = () => {
+const ScienceFiction = () => {
   const [stories, setStories] = useState([]);
   const [activeFilter, setActiveFilter] = useState('all');
 
@@ -90,4 +90,4 @@ const ScienceFictionStories = () => {
     </div>
   );
 };
-export default ScienceFictionStories;
+export default ScienceFiction;
